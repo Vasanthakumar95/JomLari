@@ -3,6 +3,7 @@ package com.example.jomlari.db
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
+@Dao
 interface RunDAO {
 
     /**
@@ -45,7 +46,7 @@ interface RunDAO {
     @Query("SELECT SUM(distance) FROM running_table")
     fun getTotalRunningDistance(): LiveData<Int>
 
-    @Query("SELECT AVR(speed) FROM running_table")
+    @Query("SELECT AVG(speed) FROM running_table")
     fun getAverageRunningSpeed(): LiveData<Float>
 
 }

@@ -23,7 +23,7 @@ interface RunDAO {
     fun getDataSortedByDate(): LiveData<List<Run>>
 
     @Query("SELECT * FROM running_table ORDER BY speed DESC")
-    fun getDataSortedByDSpeed(): LiveData<List<Run>>
+    fun getDataSortedBySpeed(): LiveData<List<Run>>
 
     @Query("SELECT * FROM running_table ORDER BY distance DESC")
     fun getDataSortedByDistance(): LiveData<List<Run>>

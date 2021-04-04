@@ -24,6 +24,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 dependencies {
@@ -98,4 +102,7 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    //neumorphism
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
 }
